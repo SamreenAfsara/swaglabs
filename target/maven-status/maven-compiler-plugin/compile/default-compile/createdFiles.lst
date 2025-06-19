@@ -1,0 +1,5 @@
+com\swaglabs\utils\Browser.class
+com\swaglabs\utils\LocatorReader.class
+com\swaglabs\utils\SmartFunctions.class
+com\swaglabs\utils\ReadTestData.class
+com\swaglabs\pages\LoginPage.class
