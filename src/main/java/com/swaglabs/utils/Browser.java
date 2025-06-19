@@ -11,9 +11,17 @@ public class Browser {
 	protected static void launchBrowser(String browsername)
 	{
 		if(browsername.equalsIgnoreCase("chrome"))
-			  driver = new ChromeDriver();
-		else
-			 driver=new EdgeDriver();
+		{
+			
+			System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
+			 driver = new ChromeDriver();
+			  
+		}
+		else {
+			
+			
+		}
+			 //driver=new EdgeDriver();
 	}
 	
 	
@@ -31,6 +39,7 @@ public class Browser {
 	
 	protected static void close()
 	{
+		if(driver!=null)
 		driver.close();
 	}
 	
