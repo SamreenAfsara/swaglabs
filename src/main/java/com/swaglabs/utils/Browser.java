@@ -2,6 +2,7 @@ package com.swaglabs.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
 public class Browser {
@@ -12,10 +13,13 @@ public class Browser {
 	{
 		if(browsername.equalsIgnoreCase("chrome"))
 		{
-			
+			// headless
 			System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver.exe");
-			 driver = new ChromeDriver();
+//			 driver = new ChromeDriver();
 			  
+			ChromeOptions options = new ChromeOptions();
+			//options.addArguments("--remote-allow-origins=*"); 
+			driver = new ChromeDriver(options);
 		}
 		else {
 			
