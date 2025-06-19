@@ -92,10 +92,10 @@ return driver.findElement(By.xpath("//*[text()='"+locatorvalue+"']"));
 		getElement(elementname).sendKeys(testdata);
 	}
 	
-	protected void  click(String elementname) throws InterruptedException
-	{
+	protected void  click(String elementname) 
+	{try {
 		Thread.sleep(3000);
-		try {
+		
 		getElement(elementname).click();
 		}
 		catch(Exception e)
